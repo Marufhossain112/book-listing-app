@@ -1,0 +1,26 @@
+Wed Sep 20 2023 9:34:30 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.user.create()` invocation:
+
+{
+  data: {
+    name: "Jhon Doe",
+    email: "john4@example.com",
+    password: "$2b$10$J1AyljgIgj/uCydNokIQneBKakWnZulju8P/rDCfUw4cbQBEsB9kG",
+    role: "admi",
+          ~~~~~~
+    contactNo: "1234567890",
+    address: "Dhaka, Bangladesh",
+    profileImg: "user.jpg"
+  },
+  select: {
+    id: true,
+    name: true,
+    email: true,
+    role: true,
+    contactNo: true,
+    address: true,
+    profileImg: true
+  }
+}
+
+Invalid value for argument `role`. Expected Role.

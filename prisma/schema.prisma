@@ -20,6 +20,7 @@ model User {
   address          String
   profileImg       String
   reviewAndRatings ReviewAndRating[]
+  orders           Order[]
 
   @@map("users")
 }
@@ -38,7 +39,7 @@ model Book {
   author           String
   price            Float
   genre            String
-  publicationDate  DateTime          @default(now())
+  publicationDate  DateTime
   categoryId       String
   category         Category          @relation(fields: [categoryId], references: [id])
   reviewAndRatings ReviewAndRating[]
@@ -54,7 +55,22 @@ model ReviewAndRating {
   book   Book   @relation(fields: [bookId], references: [id])
 }
 
+model Order {
+  id           String      @id @default(uuid())
+  orderedBooks Json
+  status       OrderStatus @default(pending)
+  userId       String
+  user         User        @relation(fields: [userId], references: [id])
+  createdAt    DateTime    @default(now())
+}
+
 enum Role {
   admin
   customer
+}
+
+enum OrderStatus {
+  pending
+  shipped
+  delivered
 }

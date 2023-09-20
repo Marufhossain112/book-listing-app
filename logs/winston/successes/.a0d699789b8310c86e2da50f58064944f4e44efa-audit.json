@@ -1,0 +1,25 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/home/maruf/backend/book_listing/university-management-core-service-starter-main/logs/winston/successes/.a0d699789b8310c86e2da50f58064944f4e44efa-audit.json",
+    "files": [
+        {
+            "date": 1695135813636,
+            "name": "/home/maruf/backend/book_listing/university-management-core-service-starter-main/logs/winston/successes/phu-2023-19-09-21-success.log",
+            "hash": "13a81adaddf77cc10f16d98b443f43a4713f6e794362d8c21efd7d0a05387458"
+        },
+        {
+            "date": 1695167826859,
+            "name": "/home/maruf/backend/book_listing/university-management-core-service-starter-main/logs/winston/successes/phu-2023-20-09-05-success.log",
+            "hash": "fc33201ef79f00ec54ba23f2e3f940e9a6c02693cdde942210cd0560aa60d1c5"
+        },
+        {
+            "date": 1695168676160,
+            "name": "/home/maruf/backend/book_listing/university-management-core-service-starter-main/logs/winston/successes/phu-2023-20-09-06-success.log",
+            "hash": "f93fa9561a9bbbe99b4a25a36a1a16e2e91b5a1689fa27879cfb47f221f0e5f9"
+        }
+    ],
+    "hashType": "sha256"
+}

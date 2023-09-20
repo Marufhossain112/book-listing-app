@@ -1,0 +1,5 @@
+Wed Sep 20 2023 7:54:2 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.user.create()` invocation:
+
+
+Unique constraint failed on the fields: (`email`)

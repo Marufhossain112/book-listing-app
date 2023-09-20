@@ -1,0 +1,93 @@
+Wed Sep 20 2023 8:5:58 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.user.create()` invocation:
+
+
+Unique constraint failed on the fields: (`email`)
+Wed Sep 20 2023 8:11:41 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.user.create()` invocation:
+
+
+Unique constraint failed on the fields: (`email`)
+Wed Sep 20 2023 8:12:4 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.user.create()` invocation:
+
+{
+  data: {
+    name: "Jhon Doe",
+    email: "john2@example.com",
+    password: "john123",
+    role: "a",
+          ~~~
+    contactNo: "1234567890",
+    address: "Dhaka, Bangladesh",
+    profileImg: "user.jpg"
+  },
+  select: {
+    id: true,
+    name: true,
+    email: true,
+    role: true,
+    contactNo: true,
+    address: true,
+    profileImg: true
+  }
+}
+
+Invalid value for argument `role`. Expected Role.
+Wed Sep 20 2023 8:12:28 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.user.create()` invocation:
+
+
+Unique constraint failed on the fields: (`email`)
+Wed Sep 20 2023 8:12:45 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.user.create()` invocation:
+
+{
+  data: {
+    name: "Jhon Doe",
+    email: "john4@example.com",
+    password: "john123",
+    role: "admi",
+          ~~~~~~
+    contactNo: "1234567890",
+    address: "Dhaka, Bangladesh",
+    profileImg: "user.jpg"
+  },
+  select: {
+    id: true,
+    name: true,
+    email: true,
+    role: true,
+    contactNo: true,
+    address: true,
+    profileImg: true
+  }
+}
+
+Invalid value for argument `role`. Expected Role.
+Wed Sep 20 2023 8:16:3 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.user.create()` invocation:
+
+{
+  data: {
+    name: "Jhon Doe",
+    email: "john4@example.com",
+    password: "john123",
+    role: "admi",
+          ~~~~~~
+    contactNo: "1234567890",
+    address: "Dhaka, Bangladesh",
+    profileImg: "user.jpg"
+  },
+  select: {
+    id: true,
+    name: true,
+    email: true,
+    role: true,
+    contactNo: true,
+    address: true,
+    profileImg: true
+  }
+}
+
+Invalid value for argument `role`. Expected Role.

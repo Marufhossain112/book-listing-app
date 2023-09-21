@@ -1,0 +1,80 @@
+Thu Sep 21 2023 7:10:38 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Password did not match.
+Thu Sep 21 2023 7:12:0 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ You are not authorized
+Thu Sep 21 2023 7:13:17 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ secret or public key must be provided
+Thu Sep 21 2023 7:14:45 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ secret or public key must be provided
+Thu Sep 21 2023 7:14:48 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ secret or public key must be provided
+Thu Sep 21 2023 7:16:36 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ secret or public key must be provided
+Thu Sep 21 2023 7:20:47 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ secret or public key must be provided
+Thu Sep 21 2023 7:28:56 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ You are not authorized
+Thu Sep 21 2023 7:29:23 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Forbidden
+Thu Sep 21 2023 7:31:44 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.user.findUnique()` invocation:
+
+{
+  where: {
+    email: undefined,
+?   id?: String,
+?   AND?: UserWhereInput | UserWhereInput[],
+?   OR?: UserWhereInput[],
+?   NOT?: UserWhereInput | UserWhereInput[],
+?   name?: StringFilter | String,
+?   password?: StringFilter | String,
+?   role?: EnumRoleFilter | Role,
+?   contactNo?: StringFilter | String,
+?   address?: StringFilter | String,
+?   profileImg?: StringFilter | String,
+?   reviewAndRatings?: ReviewAndRatingListRelationFilter,
+?   orders?: OrderListRelationFilter
+  }
+}
+
+Argument `where` of type UserWhereUniqueInput needs at least one of `id` or `email` arguments. Available options are listed in green.
+Thu Sep 21 2023 7:51:34 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "email"
+    ],
+    "message": "email is required."
+  }
+]
+Thu Sep 21 2023 7:51:44 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ [
+  {
+    "expected": "'admin' | 'customer'",
+    "received": "undefined",
+    "code": "invalid_type",
+    "path": [
+      "body",
+      "role"
+    ],
+    "message": "role is required."
+  }
+]
+Thu Sep 21 2023 7:53:19 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Unexpected token } in JSON at position 37
+Thu Sep 21 2023 7:53:23 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "password"
+    ],
+    "message": "password is required."
+  }
+]
+Thu Sep 21 2023 7:53:29 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "email"
+    ],
+    "message": "email is required."
+  }
+]

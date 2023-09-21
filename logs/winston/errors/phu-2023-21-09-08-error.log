@@ -1,0 +1,23 @@
+Thu Sep 21 2023 8:39:1 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.user.findUnique()` invocation:
+
+{
+  where: {
+    id: undefined,
+?   email?: String,
+?   AND?: UserWhereInput | UserWhereInput[],
+?   OR?: UserWhereInput[],
+?   NOT?: UserWhereInput | UserWhereInput[],
+?   name?: StringFilter | String,
+?   password?: StringFilter | String,
+?   role?: EnumRoleFilter | Role,
+?   contactNo?: StringFilter | String,
+?   address?: StringFilter | String,
+?   profileImg?: StringFilter | String,
+?   reviewAndRatings?: ReviewAndRatingListRelationFilter,
+?   orders?: OrderListRelationFilter
+  }
+}
+
+Argument `where` of type UserWhereUniqueInput needs at least one of `id` or `email` arguments. Available options are listed in green.
+Thu Sep 21 2023 8:43:28 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ You are not authorized

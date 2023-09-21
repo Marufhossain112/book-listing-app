@@ -1,0 +1,336 @@
+Thu Sep 21 2023 12:11:55 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.user.findMany()` invocation:
+
+{
+  where: {
+    AND: [
+      {
+        OR: [
+          {
+            name: {
+              contains: "Ali",
+              mode: "insensitive"
+            }
+          },
+          {
+            email: {
+              contains: "Ali",
+              mode: "insensitive"
+            }
+          },
+          {
+            role: {
+              contains: "Ali",
+              mode: "insensitive"
+            }
+          },
+          {
+            address: {
+              contains: "Ali",
+              mode: "insensitive"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  skip: 0,
+  take: 10,
+  orderBy: {
+    name: "asc"
+  }
+}
+
+Unknown argument `contains`. Available options are listed in green.
+Thu Sep 21 2023 12:12:32 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.user.findMany()` invocation:
+
+{
+  where: {
+    AND: [
+      {
+        OR: [
+          {
+            name: {
+              contains: "Ali",
+              mode: "insensitive"
+            }
+          },
+          {
+            email: {
+              contains: "Ali",
+              mode: "insensitive"
+            }
+          },
+          {
+            role: {
+              contains: "Ali",
+              mode: "insensitive"
+            }
+          },
+          {
+            address: {
+              contains: "Ali",
+              mode: "insensitive"
+            }
+          }
+        ]
+      },
+      {
+        AND: [
+          {
+            name: {
+              equals: "Maruf"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  skip: 0,
+  take: 10,
+  orderBy: {
+    name: "asc"
+  }
+}
+
+Unknown argument `contains`. Available options are listed in green.
+Thu Sep 21 2023 12:14:14 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.user.findMany()` invocation:
+
+{
+  where: {
+    AND: [
+      {
+        OR: [
+          {
+            name: {
+              contains: "Ali",
+              mode: "insensitive"
+            }
+          },
+          {
+            email: {
+              contains: "Ali",
+              mode: "insensitive"
+            }
+          },
+          {
+            role: {
+              contains: "Ali",
+              mode: "insensitive"
+            }
+          },
+          {
+            address: {
+              contains: "Ali",
+              mode: "insensitive"
+            }
+          }
+        ]
+      },
+      {
+        AND: [
+          {
+            name: {
+              equals: "Maruf"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  skip: 0,
+  take: 10,
+  orderBy: {
+    name: "asc"
+  }
+}
+
+Unknown argument `contains`. Available options are listed in green.
+Thu Sep 21 2023 12:17:4 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.user.findMany()` invocation:
+
+{
+  where: {
+    AND: [
+      {
+        OR: [
+          {
+            name: {
+              contains: "Ali",
+              mode: "insensitive"
+            }
+          },
+          {
+            email: {
+              contains: "Ali",
+              mode: "insensitive"
+            }
+          },
+          {
+            role: {
+              contains: "Ali",
+              mode: "insensitive"
+            }
+          },
+          {
+            address: {
+              contains: "Ali",
+              mode: "insensitive"
+            }
+          }
+        ]
+      },
+      {
+        AND: [
+          {
+            name: {
+              equals: "Maruf"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  skip: 0,
+  take: 10,
+  orderBy: {
+    name: "asc"
+  }
+}
+
+Unknown argument `contains`. Available options are listed in green.
+Thu Sep 21 2023 12:17:11 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.user.findMany()` invocation:
+
+{
+  where: {
+    AND: [
+      {
+        OR: [
+          {
+            name: {
+              contains: "Ali",
+              mode: "insensitive"
+            }
+          },
+          {
+            email: {
+              contains: "Ali",
+              mode: "insensitive"
+            }
+          },
+          {
+            role: {
+              contains: "Ali",
+              mode: "insensitive"
+            }
+          },
+          {
+            address: {
+              contains: "Ali",
+              mode: "insensitive"
+            }
+          }
+        ]
+      },
+      {
+        AND: [
+          {
+            name: {
+              equals: "Maruf"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  skip: 0,
+  take: 10,
+  orderBy: {
+    name: "asc"
+  }
+}
+
+Unknown argument `contains`. Available options are listed in green.
+Thu Sep 21 2023 12:35:37 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.user.findMany()` invocation:
+
+{
+  where: {
+    OR: [
+      {
+        name: {
+          contains: "",
+          mode: "insensitive"
+        }
+      },
+      {
+        email: {
+          contains: "",
+          mode: "insensitive"
+        }
+      },
+      {
+        role: {
+          contains: "",
+          mode: "insensitive"
+        }
+      },
+      {
+        address: {
+          contains: "",
+          mode: "insensitive"
+        }
+      }
+    ]
+  },
+  skip: 0,
+  take: 10,
+  orderBy: {
+    name: "asc"
+  }
+}
+
+Unknown argument `contains`. Available options are listed in green.
+Thu Sep 21 2023 12:35:45 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.user.findMany()` invocation:
+
+{
+  where: {
+    OR: [
+      {
+        name: {
+          contains: "Sharif",
+          mode: "insensitive"
+        }
+      },
+      {
+        email: {
+          contains: "Sharif",
+          mode: "insensitive"
+        }
+      },
+      {
+        role: {
+          contains: "Sharif",
+          mode: "insensitive"
+        }
+      },
+      {
+        address: {
+          contains: "Sharif",
+          mode: "insensitive"
+        }
+      }
+    ]
+  },
+  skip: 0,
+  take: 10,
+  orderBy: {
+    name: "asc"
+  }
+}
+
+Unknown argument `contains`. Available options are listed in green.

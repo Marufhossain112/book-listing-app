@@ -6,7 +6,13 @@ const createCategoryValidation = z.object({
     }),
   }),
 });
+const updateCategoryValidation = z.object({
+  body: z.object({
+    title: z.string({}).optional(),
+  }),
+});
 
 export const CategoryValidation = {
   createCategoryValidation,
+  updateCategoryValidation,
 };

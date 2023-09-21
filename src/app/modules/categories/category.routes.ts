@@ -11,5 +11,11 @@ router.post(
   validateRequest(CategoryValidation.createCategoryValidation),
   CategoryController.createCategory
 );
+router.patch(
+  '/:id',
+  auth(ENUM_USER_ROLE.ADMIN),
+  validateRequest(CategoryValidation.updateCategoryValidation),
+  CategoryController.updateCategory
+);
 router.get('/', CategoryController.getAllCategories);
 export const CategoryRoutes = router;

@@ -1,0 +1,72 @@
+Thu Sep 21 2023 9:6:43 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.user.update()` invocation:
+
+{
+  where: {
+    id: "3dddb2b1-7f6d-4142-a424-7ee3ee031b49"
+  },
+  data: {
+    df: "Omar",
+    ~~
+?   id?: String | StringFieldUpdateOperationsInput,
+?   name?: String | StringFieldUpdateOperationsInput,
+?   email?: String | StringFieldUpdateOperationsInput,
+?   password?: String | StringFieldUpdateOperationsInput,
+?   role?: Role | EnumRoleFieldUpdateOperationsInput,
+?   contactNo?: String | StringFieldUpdateOperationsInput,
+?   address?: String | StringFieldUpdateOperationsInput,
+?   profileImg?: String | StringFieldUpdateOperationsInput,
+?   reviewAndRatings?: ReviewAndRatingUpdateManyWithoutUserNestedInput,
+?   orders?: OrderUpdateManyWithoutUserNestedInput
+  }
+}
+
+Unknown argument `df`. Did you mean `id`? Available options are listed in green.
+Thu Sep 21 2023 9:7:21 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.user.update()` invocation:
+
+{
+  where: {
+    id: "3dddb2b1-7f6d-4142-a424-7ee3ee031b49"
+  },
+  data: {
+    names: "Omar Ali",
+    ~~~~~
+?   id?: String | StringFieldUpdateOperationsInput,
+?   name?: String | StringFieldUpdateOperationsInput,
+?   email?: String | StringFieldUpdateOperationsInput,
+?   password?: String | StringFieldUpdateOperationsInput,
+?   role?: Role | EnumRoleFieldUpdateOperationsInput,
+?   contactNo?: String | StringFieldUpdateOperationsInput,
+?   address?: String | StringFieldUpdateOperationsInput,
+?   profileImg?: String | StringFieldUpdateOperationsInput,
+?   reviewAndRatings?: ReviewAndRatingUpdateManyWithoutUserNestedInput,
+?   orders?: OrderUpdateManyWithoutUserNestedInput
+  }
+}
+
+Unknown argument `names`. Did you mean `name`? Available options are listed in green.
+Thu Sep 21 2023 9:9:8 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.user.update()` invocation:
+
+{
+  where: {
+    id: "3dddb2b1-7f6d-4142-a424-7ee3ee031b49"
+  },
+  data: {
+    names: "Omar Ali",
+    ~~~~~
+?   id?: String | StringFieldUpdateOperationsInput,
+?   name?: String | StringFieldUpdateOperationsInput,
+?   email?: String | StringFieldUpdateOperationsInput,
+?   password?: String | StringFieldUpdateOperationsInput,
+?   role?: Role | EnumRoleFieldUpdateOperationsInput,
+?   contactNo?: String | StringFieldUpdateOperationsInput,
+?   address?: String | StringFieldUpdateOperationsInput,
+?   profileImg?: String | StringFieldUpdateOperationsInput,
+?   reviewAndRatings?: ReviewAndRatingUpdateManyWithoutUserNestedInput,
+?   orders?: OrderUpdateManyWithoutUserNestedInput
+  }
+}
+
+Unknown argument `names`. Did you mean `name`? Available options are listed in green.

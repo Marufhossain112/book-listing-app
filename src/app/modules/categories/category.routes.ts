@@ -11,11 +11,17 @@ router.post(
   validateRequest(CategoryValidation.createCategoryValidation),
   CategoryController.createCategory
 );
+
 router.patch(
   '/:id',
   auth(ENUM_USER_ROLE.ADMIN),
   validateRequest(CategoryValidation.updateCategoryValidation),
   CategoryController.updateCategory
+);
+router.delete(
+  '/:id',
+  auth(ENUM_USER_ROLE.ADMIN),
+  CategoryController.deleteSingleCategory
 );
 router.get('/', CategoryController.getAllCategories);
 export const CategoryRoutes = router;

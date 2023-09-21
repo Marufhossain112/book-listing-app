@@ -1,0 +1,43 @@
+Thu Sep 21 2023 19:11:40 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ You are not authorized
+Thu Sep 21 2023 19:11:55 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.book.create()` invocation:
+
+{
+  data: {
+    title: "The Catcher in the Rye",
+    author: "J.D. Salinger",
+    genre: "Fiction",
+    price: 350.75,
+    publicationDate: "1951-07-16",
+                     ~~~~~~~~~~~~
+    categoryId: "b7e99c9d-82c2-4f01-aefa-119045790a8d"
+  },
+  include: {
+    category: true
+  }
+}
+
+Invalid value for argument `publicationDate`: premature end of input. Expected ISO-8601 DateTime.
+Thu Sep 21 2023 19:13:28 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Unexpected token p in JSON at position 123
+Thu Sep 21 2023 19:15:11 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.book.create()` invocation:
+
+{
+  data: {
+    title: "The Catcher in the Rye",
+    author: "J.D. Salinger",
+    genre: "Fiction",
+    price: 350.75,
+    publicationDate: "1951-07-16",
+                     ~~~~~~~~~~~~
+    categoryId: "b7e99c9d-82c2-4f01-aefa-119045790a8d"
+  },
+  include: {
+    category: true
+  }
+}
+
+Invalid value for argument `publicationDate`: premature end of input. Expected ISO-8601 DateTime.
+Thu Sep 21 2023 19:23:7 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Unexpected token { in JSON at position 208
+Thu Sep 21 2023 19:26:42 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ You are not authorized
+Thu Sep 21 2023 19:27:20 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ You are not authorized

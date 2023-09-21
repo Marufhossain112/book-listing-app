@@ -1,28 +1,31 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Category, Prisma } from '@prisma/client';
+import { Book, Prisma } from '@prisma/client';
 import { prisma } from '../../../shared/prisma';
 import { paginationHelpers } from '../../../helpers/paginationHelper';
 import { IGenericResponse } from '../../../interfaces/common';
 import { IPaginationOptions } from '../../../interfaces/pagination';
-import { ICategoryFilterRequest } from './category.interface';
-import { CategorySearchableFields } from './category.constants';
+import { IBookFilterRequest } from './book.interface';
+import { BookSearchableFields } from './book.constants';
 
-const createCategory = async (categoryData: Category): Promise<Category> => {
-  const result = await prisma.category.create({
-    data: categoryData,
+const createBook = async (BookData: Book): Promise<Book> => {
+  const result = await prisma.book.create({
+    data: BookData,
+    include: {
+      category: true,
+    },
   });
   return result;
 };
-const getAllCategories = async (
-  filters: ICategoryFilterRequest,
+const getAllBooks = async (
+  filters: IBookFilterRequest,
   options: IPaginationOptions
-): Promise<IGenericResponse<Category[]>> => {
+): Promise<IGenericResponse<Book[]>> => {
   const { page, skip, limit } = paginationHelpers.calculatePagination(options);
   const { searchTerm, ...filterData } = filters;
   const andConditions = [];
   if (searchTerm) {
     andConditions.push({
-      OR: CategorySearchableFields.map(field => ({
+      OR: BookSearchableFields.map(field => ({
         [field]: {
           contains: searchTerm,
           mode: 'insensitive',
@@ -40,11 +43,12 @@ const getAllCategories = async (
       })),
     });
   }
-  const whereConditions: Prisma.CategoryWhereInput =
+  const whereConditions: Prisma.BookWhereInput =
     andConditions.length > 0 ? { AND: andConditions } : {};
   const { sortBy, sortOrder } = options;
-  const result = await prisma.category.findMany({
+  const result = await prisma.book.findMany({
     where: whereConditions,
+    include: { category: true },
     skip,
     take: limit,
     orderBy:
@@ -55,7 +59,7 @@ const getAllCategories = async (
         : { title: 'asc' },
   });
   // console.log('I am groot', filters);
-  const total = await prisma.category.count();
+  const total = await prisma.book.count();
   return {
     meta: {
       total,
@@ -66,28 +70,28 @@ const getAllCategories = async (
   };
 };
 
-const updateCategory = async (
+const updateBook = async (
   id: string,
-  payload: Partial<Category>
-): Promise<Partial<Category>> => {
-  const result = await prisma.category.update({
+  payload: Partial<Book>
+): Promise<Partial<Book>> => {
+  const result = await prisma.book.update({
     where: { id },
     data: payload,
   });
   return result;
 };
 
-const deleteSingleCategory = async (id: string): Promise<Category | null> => {
-  const result = await prisma.category.delete({
+const deleteSingleBook = async (id: string): Promise<Book | null> => {
+  const result = await prisma.book.delete({
     where: {
       id,
     },
   });
   return result;
 };
-export const CategoryService = {
-  createCategory,
-  getAllCategories,
-  updateCategory,
-  deleteSingleCategory,
+export const BookService = {
+  createBook,
+  getAllBooks,
+  updateBook,
+  deleteSingleBook,
 };

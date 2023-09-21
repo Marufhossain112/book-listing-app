@@ -34,6 +34,31 @@
             "date": 1695180666853,
             "name": "/home/maruf/backend/book_listing/university-management-core-service-starter-main/logs/winston/errors/phu-2023-20-09-09-error.log",
             "hash": "b4bab7551762ffbb7c2c4d2dc9685490f01f2aac1c13c08397126621fb6b25df"
+        },
+        {
+            "date": 1695199467902,
+            "name": "/home/maruf/backend/book_listing/university-management-core-service-starter-main/logs/winston/errors/phu-2023-20-09-14-error.log",
+            "hash": "cb7e78c4aba168faa977bbb53784d6ebdbd282fd0c5a94fad91fd3599be898e6"
+        },
+        {
+            "date": 1695228314523,
+            "name": "/home/maruf/backend/book_listing/university-management-core-service-starter-main/logs/winston/errors/phu-2023-20-09-22-error.log",
+            "hash": "fd601ad5b37d24edaa6e6365b6df472952c1b947ad1a65092d35b5b99c2326d8"
+        },
+        {
+            "date": 1695229202155,
+            "name": "/home/maruf/backend/book_listing/university-management-core-service-starter-main/logs/winston/errors/phu-2023-20-09-23-error.log",
+            "hash": "41ddce38b649760f653e021fab7a8c9cb6e499ae6bc363b70476e09d0a76795e"
+        },
+        {
+            "date": 1695254130561,
+            "name": "/home/maruf/backend/book_listing/university-management-core-service-starter-main/logs/winston/errors/phu-2023-21-09-05-error.log",
+            "hash": "05ee755df0577628751f88a0e60413d35723cdcdbf222fa5c61f4389802aeb03"
+        },
+        {
+            "date": 1695254667406,
+            "name": "/home/maruf/backend/book_listing/university-management-core-service-starter-main/logs/winston/errors/phu-2023-21-09-06-error.log",
+            "hash": "b7edc52c82c0338d9caf0ac7f59487cb638ac3770161c7d5541793740eb8903e"
         }
     ],
     "hashType": "sha256"

@@ -8,4 +8,8 @@ export default {
   env: process.env.NODE_ENV,
   port: process.env.PORT,
   database_url: process.env.DATABASE_URL,
+  jwt: {
+    token: process.env.SECRET,
+    token_expires: process.env.SECRET_EXPIRES,
+  },
 };

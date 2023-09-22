@@ -1,0 +1,5 @@
+Fri Sep 22 2023 11:21:35 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.book.create()` invocation:
+
+
+Foreign key constraint failed on the field: `Book_categoryId_fkey (index)`

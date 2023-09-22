@@ -26,3 +26,24 @@ Invalid `prisma.book.findMany()` invocation:
 }
 
 Argument `lte`: Invalid value provided. Expected Float or FloatFieldRefInput, provided String.
+Fri Sep 22 2023 10:58:44 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.book.findUnique()` invocation:
+
+{
+  where: {
+    id: undefined,
+?   AND?: BookWhereInput | BookWhereInput[],
+?   OR?: BookWhereInput[],
+?   NOT?: BookWhereInput | BookWhereInput[],
+?   title?: StringFilter | String,
+?   author?: StringFilter | String,
+?   price?: FloatFilter | Float,
+?   genre?: StringFilter | String,
+?   publicationDate?: StringFilter | String,
+?   categoryId?: StringFilter | String,
+?   category?: CategoryRelationFilter | CategoryWhereInput,
+?   reviewAndRatings?: ReviewAndRatingListRelationFilter
+  }
+}
+
+Argument `where` of type BookWhereUniqueInput needs at least one of `id` arguments. Available options are listed in green.

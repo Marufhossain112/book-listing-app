@@ -24,4 +24,5 @@ router.delete(
   CategoryController.deleteSingleCategory
 );
 router.get('/', CategoryController.getAllCategories);
+router.get('/:id', CategoryController.getSingleCategory);
 export const CategoryRoutes = router;

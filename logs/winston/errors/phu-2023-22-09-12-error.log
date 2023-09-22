@@ -1,0 +1,8 @@
+Fri Sep 22 2023 12:52:23 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ You are not authorized
+Fri Sep 22 2023 12:52:53 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ invalid signature
+Fri Sep 22 2023 12:55:12 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Password did not match.
+Fri Sep 22 2023 12:55:40 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.order.create()` invocation:
+
+
+Foreign key constraint failed on the field: `Order_userId_fkey (index)`

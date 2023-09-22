@@ -23,8 +23,20 @@ const getAllOrders = catchAsync(async (req: Request, res: Response) => {
     data: result,
   });
 });
+const getSingleOrder = catchAsync(async (req: Request, res: Response) => {
+  const token = req.headers.authorization;
+  const { orderId } = req.params;
+  const result = await OrderService.getSingleOrder(token as string, orderId);
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Single order data fetched  successfully.',
+    data: result,
+  });
+});
 
 export const OrderController = {
   createOrder,
   getAllOrders,
+  getSingleOrder,
 };

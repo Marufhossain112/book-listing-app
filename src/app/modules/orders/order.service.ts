@@ -24,8 +24,23 @@ const getAllOrders = async (token: string): Promise<Order[] | null> => {
   });
   return result;
 };
+const getSingleOrder = async (
+  token: string,
+  orderId: string
+): Promise<Order[] | null> => {
+  const verifiedUser = jwtHelpers.verifyToken(
+    token,
+    config.jwt.token as string
+  );
+  const { userId } = verifiedUser;
+  const result = await prisma.order.findMany({
+    where: { id: orderId, userId },
+  });
+  return result;
+};
 
 export const OrderService = {
   createOrder,
   getAllOrders,
+  getSingleOrder,
 };

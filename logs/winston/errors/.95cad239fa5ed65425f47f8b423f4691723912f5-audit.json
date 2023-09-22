@@ -139,6 +139,11 @@
             "date": 1695387812288,
             "name": "/home/maruf/backend/book_listing/university-management-core-service-starter-main/logs/winston/errors/phu-2023-22-09-19-error.log",
             "hash": "869ca1661edd987daec50e489d58d765a48be239062bda05bc18b072d08ad9cb"
+        },
+        {
+            "date": 1695392466989,
+            "name": "/home/maruf/backend/book_listing/university-management-core-service-starter-main/logs/winston/errors/phu-2023-22-09-20-error.log",
+            "hash": "d35fc4aba1e533252349428698f666dffc15daf6f97f08290ced7ed5ac2df699"
         }
     ],
     "hashType": "sha256"

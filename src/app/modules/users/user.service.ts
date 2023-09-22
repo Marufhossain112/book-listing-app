@@ -1,23 +1,23 @@
 import { Prisma, User } from '@prisma/client';
-import { prisma } from '../../../shared/prisma';
-import { IUserFilterRequest } from './user.interface';
-import { IPaginationOptions } from '../../../interfaces/pagination';
-import { IGenericResponse } from '../../../interfaces/common';
 import { paginationHelpers } from '../../../helpers/paginationHelper';
+import { IGenericResponse } from '../../../interfaces/common';
+import { IPaginationOptions } from '../../../interfaces/pagination';
+import { prisma } from '../../../shared/prisma';
 import { UserSearchableFields } from './user.constants';
+import { IUserFilterRequest } from './user.interface';
 
 const getAllUsers = async (
   filters: IUserFilterRequest,
   options: IPaginationOptions
 ): Promise<IGenericResponse<User[]>> => {
   const { page, skip, limit } = paginationHelpers.calculatePagination(options);
-  const { searchTerm, ...filterData } = filters;
+  const { search, ...filterData } = filters;
   const andConditions = [];
-  if (searchTerm) {
+  if (search) {
     andConditions.push({
       OR: UserSearchableFields.map(field => ({
         [field]: {
-          contains: searchTerm,
+          contains: search,
           mode: 'insensitive',
         },
       })),

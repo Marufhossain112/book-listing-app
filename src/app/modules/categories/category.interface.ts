@@ -1,4 +1,4 @@
 export type ICategoryFilterRequest = {
-  searchTerm?: string;
+  search?: string;
   title?: string;
 };

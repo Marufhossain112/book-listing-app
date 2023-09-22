@@ -1,0 +1,25 @@
+Fri Sep 22 2023 9:45:52 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.book.findMany()` invocation:
+
+{
+  where: {
+    AND: [
+      {
+        AND: [
+          undefined
+          ~~~~~~~~~
+        ]
+      }
+    ]
+  },
+  include: {
+    category: true
+  },
+  skip: 0,
+  take: 10,
+  orderBy: {
+    title: "asc"
+  }
+}
+
+Invalid value for argument `AND[0]`: Can not use `undefined` value within array. Use `null` or filter out `undefined` values.

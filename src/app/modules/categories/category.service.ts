@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Category, Prisma } from '@prisma/client';
-import { prisma } from '../../../shared/prisma';
 import { paginationHelpers } from '../../../helpers/paginationHelper';
 import { IGenericResponse } from '../../../interfaces/common';
 import { IPaginationOptions } from '../../../interfaces/pagination';
-import { ICategoryFilterRequest } from './category.interface';
+import { prisma } from '../../../shared/prisma';
 import { CategorySearchableFields } from './category.constants';
+import { ICategoryFilterRequest } from './category.interface';
 
 const createCategory = async (categoryData: Category): Promise<Category> => {
   const result = await prisma.category.create({
@@ -18,13 +18,13 @@ const getAllCategories = async (
   options: IPaginationOptions
 ): Promise<IGenericResponse<Category[]>> => {
   const { page, skip, limit } = paginationHelpers.calculatePagination(options);
-  const { searchTerm, ...filterData } = filters;
+  const { search, ...filterData } = filters;
   const andConditions = [];
-  if (searchTerm) {
+  if (search) {
     andConditions.push({
       OR: CategorySearchableFields.map(field => ({
         [field]: {
-          contains: searchTerm,
+          contains: search,
           mode: 'insensitive',
         },
       })),

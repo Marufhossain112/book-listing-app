@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Book, Prisma } from '@prisma/client';
-import { prisma } from '../../../shared/prisma';
 import { paginationHelpers } from '../../../helpers/paginationHelper';
 import { IGenericResponse } from '../../../interfaces/common';
 import { IPaginationOptions } from '../../../interfaces/pagination';
-import { IBookFilterRequest } from './book.interface';
+import { prisma } from '../../../shared/prisma';
 import { BookSearchableFields } from './book.constants';
+import { IBookFilterRequest } from './book.interface';
 
 const createBook = async (BookData: Book): Promise<Book> => {
   const result = await prisma.book.create({
@@ -21,26 +21,53 @@ const getAllBooks = async (
   options: IPaginationOptions
 ): Promise<IGenericResponse<Book[]>> => {
   const { page, skip, limit } = paginationHelpers.calculatePagination(options);
-  const { searchTerm, ...filterData } = filters;
+  const { search, ...filterData } = filters;
   const andConditions = [];
-  if (searchTerm) {
+  if (search) {
     andConditions.push({
       OR: BookSearchableFields.map(field => ({
         [field]: {
-          contains: searchTerm,
+          contains: search,
           mode: 'insensitive',
         },
       })),
     });
   }
+
   // console.log('dd', filterData);
   if (Object.keys(filterData).length > 0) {
     andConditions.push({
-      AND: Object.keys(filterData).map(key => ({
-        [key]: {
-          equals: (filterData as any)[key],
-        },
-      })),
+      AND: Object.keys(filterData).map(key => {
+        // if ((filterData as any)[key]) {
+        if (key === 'category') {
+          return {
+            category: {
+              id: {
+                equals: filterData[key],
+              },
+            },
+          };
+        } else if (key === 'maxPrice') {
+          return {
+            price: {
+              lte: Number(filterData[key]),
+            },
+          };
+        } else if (key === 'minPrice') {
+          return {
+            price: {
+              gte: Number(filterData[key]),
+            },
+          };
+        } else {
+          return {
+            [key]: {
+              equals: (filterData as any)[key],
+            },
+          };
+        }
+        // }
+      }),
     });
   }
   const whereConditions: Prisma.BookWhereInput =

@@ -1,5 +1,5 @@
 export type IUserFilterRequest = {
-  searchTerm?: string;
+  search?: string;
   name?: string;
   email?: string;
   address?: string;

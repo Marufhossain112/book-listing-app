@@ -1,0 +1,28 @@
+Fri Sep 22 2023 8:38:8 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.book.findMany()` invocation:
+
+{
+  where: {
+    AND: [
+      {
+        AND: [
+          {
+            category: {
+              equals: "6dcc169d-a1bc-462a-9c72-936b180d79c2"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  include: {
+    category: true
+  },
+  skip: 0,
+  take: 10,
+  orderBy: {
+    title: "asc"
+  }
+}
+
+Unknown argument `equals`. Available options are listed in green.

@@ -1,0 +1,28 @@
+Fri Sep 22 2023 10:21:14 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.book.findMany()` invocation:
+
+{
+  where: {
+    AND: [
+      {
+        AND: [
+          {
+            price: {
+              lte: "500"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  include: {
+    category: true
+  },
+  skip: 0,
+  take: 10,
+  orderBy: {
+    title: "asc"
+  }
+}
+
+Argument `lte`: Invalid value provided. Expected Float or FloatFieldRefInput, provided String.

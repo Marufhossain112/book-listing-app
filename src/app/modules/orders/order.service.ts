@@ -1,3 +1,5 @@
+import config from '../../../config';
+import { jwtHelpers } from '../../../helpers/jwtHelpers';
 import { prisma } from './../../../shared/prisma';
 import { Order, Prisma } from '@prisma/client';
 
@@ -10,12 +12,19 @@ const createOrder = async (
   return result;
 };
 
-const getAllOrders = async (): Promise<Order[] | null> => {
+const getAllOrders = async (token: string): Promise<Order[] | null> => {
+  const verifiedUser = jwtHelpers.verifyToken(
+    token,
+    config.jwt.token as string
+  );
+  const { role, userId } = verifiedUser;
+  const whereCondition = role === 'customer' ? { userId } : {};
   const result = await prisma.order.findMany({
-    where: {},
+    where: whereCondition,
   });
   return result;
 };
+
 export const OrderService = {
   createOrder,
   getAllOrders,

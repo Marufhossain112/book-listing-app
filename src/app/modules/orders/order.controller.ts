@@ -13,4 +13,13 @@ const createOrder = catchAsync(async (req: Request, res: Response) => {
     data: result,
   });
 });
-export const OrderController = { createOrder };
+const getAllOrders = catchAsync(async (req: Request, res: Response) => {
+  const result = await OrderService.getAllOrders();
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'All orders data fetched  successfully.',
+    data: result,
+  });
+});
+export const OrderController = { createOrder, getAllOrders };

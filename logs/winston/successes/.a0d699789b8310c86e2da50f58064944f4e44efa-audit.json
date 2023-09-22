@@ -129,6 +129,11 @@
             "date": 1695362543040,
             "name": "/home/maruf/backend/book_listing/university-management-core-service-starter-main/logs/winston/successes/phu-2023-22-09-12-success.log",
             "hash": "d5d194ad6ef79755cf1719b9cdbf1c1002e9986dc57227e1121ca032e5a11077"
+        },
+        {
+            "date": 1695386368484,
+            "name": "/home/maruf/backend/book_listing/university-management-core-service-starter-main/logs/winston/successes/phu-2023-22-09-18-success.log",
+            "hash": "2376be1909a73bf2f6e4b4c1f991cbc5a80acfdcb81224052384807f0a2c1943"
         }
     ],
     "hashType": "sha256"
